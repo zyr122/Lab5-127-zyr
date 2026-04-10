@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>个人简历</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .resume {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    border: 1px solid #333;
+    background-image: url("aa.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .caption {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+  }
+
+  .resume-body {
+    display: grid;
+    grid-template-columns: 120px 1fr 120px 1fr 120px 1fr 180px;
+  }
+
+  .cell {
+    padding: 10px;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+  }
+
+  .title {
+    background: #d3d3d3;
+    font-weight: bold;
+    justify-content: center;
+  }
+
+  .content {
+    background: rgba(230, 243, 255, 0.3);
+  }
+
+  .photo-area {
+    grid-row: 1 / 4;
+    grid-column: 7;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d3d3d3;
+    position: relative;
+  }
+
+  .photo-area img {
+    width: 160px;
+    height: 220px;
+    transition: 0.3s;
+  }
+
+  .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .photo-area:hover img {
+    opacity: 0.5;
+  }
+  .photo-area:hover .play-btn {
+    display: flex;
+  }
+
+  .row4 {
+    grid-column: 1 / 8;
+    display: grid;
+    grid-template-columns: 120px 1fr 120px 2fr 120px 1.7fr;
+  }
+  .row4 .cell {
+    border-bottom: 1px solid #333;
+  }
+
+  .full-row {
+    grid-column: 1 / 8;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+  }
+  .full-content {
+    background: rgba(230, 243, 255, 0.3);
+    padding: 30px 20px;
+    text-indent: 2em;
+    line-height: 1.6;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+  }
+
+  .ad {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 200px;
+    height: 250px;
+    border: 2px solid red;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="resume">
+    <div class="caption">个人简历</div>
+
+    <div class="resume-body">
+   
+      <div class="cell title"> 姓名</div>
+      <div class="cell content">赵依然</div>
+      <div class="cell title"> 性别</div>
+      <div class="cell content">女</div>
+      <div class="cell title"> 年龄</div>
+      <div class="cell content">20</div>
+
+      <div class="cell title">🏠 籍贯</div>
+      <div class="cell content">山东菏泽</div>
+      <div class="cell title">📞 电话</div>
+      <div class="cell content">18833556459</div>
+      <div class="cell title">✉️ 邮箱</div>
+      <div class="cell content">2499598539@qq.com</div>
+
+      <div class="cell title">🎓 学历</div>
+      <div class="cell content">本科</div>
+      <div class="cell title">🩺 健康</div>
+      <div class="cell content">良好</div>
+      <div class="cell title">❤️ 婚姻</div>
+      <div class="cell content">未婚</div>
+
+      <div class="photo-area">
+        <img src="photo.jpg" alt="照片">
+        <div class="play-btn">▶</div>
+      </div>
+
+      <div class="row4">
+        <div class="cell title">💼 求职意向</div>
+        <div class="cell content"></div>
+        <div class="cell title">📚 专业</div>
+        <div class="cell content">计算机科学与技术</div>
+        <div class="cell title">🏛 毕业院校</div>
+        <div class="cell content">烟台理工学院</div>
+      </div>
+
+      <div class="full-row">
+        <div class="cell title"> 技能证书</div>
+        <div class="full-content"></div>
+      </div>
+
+      <div class="full-row">
+        <div class="cell title"> 个人特长</div>
+        <div class="full-content">喜欢听音乐、摄影、旅行，表达能力良好。</div>
+      </div>
+
+      <div class="full-row">
+        <div class="cell title"> 项目经历</div>
+        <div class="full-content"></div>
+      </div>
+      <div class="full-row">
+        <div class="cell title"> 自我评价</div>
+        <div class="full-content">
+本人性格开朗稳重，待人热情真诚，工作认真负责，积极主动，能吃苦耐劳，有较强的组织能力、团队协作精神和良好的沟通能力。学习态度端正，适应能力较强，对待事务耐心细致，善于总结反思。在集体中能积极配合他人完成各项任务，有较强的集体荣誉感与责任心，日常兴趣广泛，热爱生活，乐于尝试新事物，综合素养良好。今后将继续保持积极进取的态度，不断提升自我，以踏实认真的作风投入学习与工作，努力实现个人价值。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ad">
+  <img src="11.jpg" width="200" height="250" alt="广告">
+</div>
+
+</body>
+</html>
